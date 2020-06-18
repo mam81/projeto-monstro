@@ -1,10 +1,14 @@
 new Vue({
   el: "#app",
   data: {
-    playerLife: 15,
-    monsterLife: 30,
+    playerLife: 0,
+    monsterLife: 10,
   },
-  computed: {},
+  computed: {
+    hasResult() {
+      return this.playerLife == 0 || this.monsterLife == 0;
+    },
+  },
   methods: {},
   watch: {},
 });
