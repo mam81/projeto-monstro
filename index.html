@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/vue"></script>
-    <title>Monster Killer ( The Final Battle )</title>
+    <title>Monster Killer</title>
   </head>
   <body>
     <div id="app">
@@ -48,11 +48,19 @@
             Special Attack
           </button>
           <button @click="healAndHurt" class="btn heal">Heal</button>
-          <button @click="running = false" class="btn give-up">Give up</button>
+          <button @click="running = false" class="btn give-up">
+            Give up
+          </button>
         </template>
         <button v-else @click="startGame" class="btn start">Start</button>
       </div>
-      <div v-if="logs.length" class="panel logs"></div>
+      <div v-if="logs.length" class="panel logs">
+        <ul>
+          <li v-for="log in logs" :class="log.cls" class="log">
+            {{ log.text }}
+          </li>
+        </ul>
+      </div>
     </div>
 
     <script src="app.js"></script>
