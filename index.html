@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/vue"></script>
-    <title>Monster Killer</title>
+    <title>Monster Killer ( The Final Battle )</title>
   </head>
   <body>
     <div id="app">
@@ -52,7 +52,7 @@
         </template>
         <button v-else @click="startGame" class="btn start">Start</button>
       </div>
-      <div class="panel logs"></div>
+      <div v-if="logs.length" class="panel logs"></div>
     </div>
 
     <script src="app.js"></script>
