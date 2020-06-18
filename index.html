@@ -41,7 +41,15 @@
         <div v-if="monsterLife == 0" class="win">The player win!!</div>
         <div v-else class="lose">The monster win !!</div>
       </div>
-      <div class="panel button"></div>
+      <div class="panel buttons">
+        <template v-if="running">
+          <button class="btn attack">Attack</button>
+          <button class="btn special-attack">Special Attack</button>
+          <button class="btn heal">Heal</button>
+          <button class="btn give-up">Give up</button>
+        </template>
+        <button v-else class="btn start">Start</button>
+      </div>
       <div class="panel logs"></div>
     </div>
 
